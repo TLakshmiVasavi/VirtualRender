@@ -1,3 +1,92 @@
+tr:last-child {
+  border-bottom: 1px solid;
+}
+
+.group {
+  position: relative;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  z-index: 2;
+}
+
+.border-right-0 {
+  border: 1px solid;
+  border-right: unset;
+}
+
+.border-left-0 {
+  border: 1px solid;
+  border-left: unset;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.header {
+  top: 0px;
+  position: fixed;
+  align-items: center;
+  display: flex;
+  height: 50px;
+  background-color: blue;
+  width: 100vw;
+  color: white;
+}
+
+table {
+  height: 30px;
+  border-spacing: 0px;
+  border: 1px solid black;
+}
+
+th,
+td {
+  min-width: 150px;
+  height: 30px;
+  border-spacing: 0px;
+  border: 1px solid black;
+}
+
+.fixed,
+.searchBox {
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+}
+
+.fixed {
+  top: 100px;
+}
+
+.searchBox {
+  display: flex;
+  top: 60px;
+}
+
+.item {
+  position: absolute;
+}
+
+.done {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through;
+}
+
+td {
+  border: 1px solid black;
+  border-bottom: 0px;
+}
+
 .App {
   text-align: center;
 }
