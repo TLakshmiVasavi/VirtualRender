@@ -8,7 +8,7 @@ export declare module Model {
     accType: string;
     startdate: Date;
     dateCreated: Date;
-    Location: string;
+    location: string;
   }
 
   interface IProps {
@@ -16,12 +16,16 @@ export declare module Model {
   }
 
   interface IState {
+    [key: string]: any;
+    isSearching: boolean;
+    sortBy: string;
+    sortDirection: string;
     searchCondition: string;
     searchRes: EmpData[];
-    displayData: EmpData[];
     numVisibleItems: number;
     start: number;
     end: number;
     containerStyle: { height: number };
+    modal: boolean;
   }
 }

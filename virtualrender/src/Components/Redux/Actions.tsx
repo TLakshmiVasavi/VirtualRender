@@ -13,18 +13,13 @@ class EmployeeActions {
 export default EmployeeActions;
 var empActions = new EmployeeActions();
 export function getOnBoardingDetails(isLoading: boolean, isLoaded: boolean) {
-  console.log("started");
   let x: any = null;
   if (!isLoading && !isLoaded) {
-    console.log("getting from api");
     store.dispatch(empActions.GetEmpDetailsAction());
   } else if (isLoaded) {
-    x =
-      store.getState().employee.EmpDetails == undefined
-        ? null
-        : store.getState().employee.EmpDetails;
+    x = store.getState().employee.EmpDetails ?? [];
     console.log(store.getState().employee.EmpDetails);
   }
   console.log(x);
-  return x;
+  return x ?? [];
 }

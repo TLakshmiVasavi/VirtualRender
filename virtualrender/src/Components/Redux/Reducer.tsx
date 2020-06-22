@@ -34,7 +34,7 @@ export const empReducer: Reducer<IEmpState> = (
         ...state,
         isLoading: false,
         isLoaded: true,
-        EmpDetails: action.payload,
+        EmpDetails: action.payload ?? [],
       };
     case EmployeeEvents.GET_EMP_DETAILS_FAILURE:
       return {
