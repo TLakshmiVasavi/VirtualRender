@@ -26,6 +26,6 @@ export declare module Model {
     start: number;
     end: number;
     containerStyle: { height: number };
-    modal: boolean;
+    showIndex: number;
   }
 }

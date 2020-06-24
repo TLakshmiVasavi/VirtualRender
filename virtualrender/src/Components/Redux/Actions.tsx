@@ -1,7 +1,7 @@
 import { EmployeeEvents } from "./Types";
 import { createAction } from "typesafe-actions";
 import EmpService from "./Services";
-import { Model } from "../Interface";
+import { Model } from "../Models";
 import { store } from "./Store";
 var service = new EmpService();
 class EmployeeActions {

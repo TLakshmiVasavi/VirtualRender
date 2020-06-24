@@ -1,5 +1,5 @@
 import { Reducer } from "redux";
-import { Model } from "../Interface";
+import { Model } from "../Models";
 import { EmployeeEvents } from "./Types";
 interface IEmpState {
   EmpDetails: Model.EmpData[];

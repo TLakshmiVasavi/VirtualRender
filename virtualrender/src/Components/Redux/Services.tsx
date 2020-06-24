@@ -1,6 +1,6 @@
 import react from "react";
 import { store } from "./Store";
-import { Model } from "../Interface";
+import { Model } from "../Models";
 import ResponseActions from "./ResponseActions";
 var responseActions = new ResponseActions();
 class EmpService {

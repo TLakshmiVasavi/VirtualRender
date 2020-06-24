@@ -1,6 +1,6 @@
 import { EmployeeEvents } from "./Types";
 import { createAction } from "typesafe-actions";
-import { Model } from "../Interface";
+import { Model } from "../Models";
 import { store } from "./Store";
 class EmployeeActions {
   GetEmpDetailsSuccessAction = createAction(

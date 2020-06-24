@@ -1,8 +1,74 @@
+.bg-aliceblue {
+  background-color: aliceblue;
+}
+.heading {
+  font-size: 20px;
+}
+input {
+  font-size: 15px;
+  font-family: calibri, "Segoe UI";
+  /* height: 25px;
+    width: 300px;
+    border-radius: 1.5em;
+ */
+  padding-left: 10px;
+  outline: none;
+  /* padding: 2px; */
+  border: unset;
+  margin: 10px;
+  /* border-color: white; */
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+  height: 25px;
+  width: 500px;
+  border-radius: 1.5em;
+}
+.regType {
+  min-width: 100px;
+}
+.hightlight:hover {
+  background-color: grey;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rt-space {
+  margin-right: 40px;
+}
+
+.pic {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.logo {
+  background: url(./Images/Logo.png);
+  /* filter: invert(7%) sepia(90%) saturate(5821%) hue-rotate(244deg)
+    brightness(140%) contrast(154%); */
+  /* filter: invert(7%) sepia(90%) saturate(5821%) hue-rotate(225deg)
+    brightness(140%) contrast(154%); */
+  /* filter: invert(18%) sepia(83%) saturate(1810%) hue-rotate(212deg)
+    brightness(101%) contrast(99%); */
+  filter: invert(27%) sepia(80%) saturate(1162%) hue-rotate(192deg)
+    brightness(86%) contrast(118%);
+  width: 200px;
+  height: 40px;
+  margin-left: 30px;
+  /* margin: 10px; */
+}
+
 .cursor {
   outline: none;
   cursor: pointer;
 }
+
 table {
+  text-align: left;
   border-spacing: 0px;
 }
 
@@ -15,44 +81,55 @@ table {
 }
 
 .header {
+  justify-content: space-between;
   align-items: center;
   display: flex;
   height: 50px;
-  background-color: blue;
+  background-color: #1e48a4;
   width: 100vw;
   color: white;
 }
-
+.heading {
+  font-size: 20px;
+}
+tr {
+  background-color: #f0f5ff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+}
 .icon {
   position: absolute;
-  top: 1px;
-  right: 0;
+  top: 10px;
+  right: 20px;
   z-index: 2;
 }
 
 .searchBox {
+  margin-left: 20px;
   display: flex;
   top: 60px;
 }
 
-.viewPort {
+/* .viewPort {
+  width: 1480px;
   position: relative;
   height: 80vh;
   overflow-y: auto;
-}
+} */
 
 .itemContainer {
+  overflow-y: auto;
   position: absolute;
-  width: 100%;
+  width: 1480px;
+  max-height: 80vh;
 }
 
 .item {
   position: absolute;
-  text-align: center;
 }
 
 .fixed {
-  position: fixed;
+  box-shadow: unset;
+  /* position: fixed; */
   background-color: white;
   z-index: 2;
 }
@@ -60,100 +137,44 @@ table {
 th {
   cursor: pointer;
 }
-
+td {
+  background-color: #f0f5ff;
+}
 th,
 td {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
   min-width: 150px;
   height: 30px;
 }
-/* PopUpModal */
-
-.modal {
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  display: none;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  outline: 0;
-}
 
 .modal-container {
+  background-color: white;
+  z-index: 4;
+  width: 70px;
   position: absolute;
-  /* position: absolute; */
-  width: 10px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
   border-radius: 2px;
-  /* background: #ffffff;
-  left: 25%;
-  top: 30%;
-  padding: 20px; */
 }
-/* 
-.d-block {
-  display: block !important;
-}
-
-#pop:focus {
-  background-color: green;
-}
-
-.d-none {
-  display: none;
-}
-
-.close {
-  cursor: pointer;
-  position: absolute;
-  display: block;
-  padding: 2px 5px;
-  line-height: 20px;
-  right: -10px;
-  top: -10px;
-  font-size: 24px;
-  background: #ffffff;
-  border-radius: 18px;
-  border: 1px solid #cfcece;
-} */
 
 .App {
   text-align: center;
+  font-family: calibri, Segoe UI;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.itemContainer::-webkit-scrollbar {
+  width: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Handle */
+.itemContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Handle on hover */
+.itemContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
